@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/img_qrcode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/space" />
+
+            <EditText
+                android:id="@+id/edit_hash"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btm_height"
+                android:background="@color/gray"
+                android:gravity="center"
+                android:hint="交易哈希"
+                android:paddingLeft="4dp"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/space" />
+
+            <Button
+                android:id="@+id/btn_search_transaction"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btm_height"
+                android:background="@color/colorPrimary"
+                android:text="查询交易"
+                android:textColor="@color/white" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/space" />
+
+            <LinearLayout
+                android:id="@+id/search_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"
+                    android:text="交易状态"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/space" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="@dimen/btm_height"
+                        android:background="@color/gray"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="4dp"
+                        android:singleLine="true"
+                        android:text="TX HashTX HashTX HashTX Hash"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_hash"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/btm_height"
+                        android:layout_gravity="center"
+                        android:background="@color/gray"
+                        android:gravity="center"
+                        android:paddingLeft="4dp"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/space" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="@dimen/btm_height"
+                        android:background="@color/gray"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="4dp"
+                        android:singleLine="true"
+                        android:text="Contract Address"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_contract"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/btm_height"
+                        android:layout_gravity="center"
+                        android:background="@color/gray"
+                        android:gravity="center"
+                        android:paddingLeft="4dp"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/space" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="@dimen/btm_height"
+                        android:background="@color/gray"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="4dp"
+                        android:singleLine="true"
+                        android:text="TxReceipt Status"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/btm_height"
+                        android:layout_gravity="center"
+                        android:background="@color/gray"
+                        android:gravity="center"
+                        android:paddingLeft="4dp"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/space" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="@dimen/btm_height"
+                        android:background="@color/gray"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="4dp"
+                        android:singleLine="true"
+                        android:text="From"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_from"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/btm_height"
+                        android:layout_gravity="center"
+                        android:background="@color/gray"
+                        android:gravity="center"
+                        android:paddingLeft="4dp"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/space" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="@dimen/btm_height"
+                        android:background="@color/gray"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="4dp"
+                        android:singleLine="true"
+                        android:text="To"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_to"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/btm_height"
+                        android:layout_gravity="center"
+                        android:background="@color/gray"
+                        android:gravity="center"
+                        android:paddingLeft="4dp"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/space" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="@dimen/btm_height"
+                        android:background="@color/gray"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="4dp"
+                        android:singleLine="true"
+                        android:text="金额"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/btm_height"
+                        android:layout_gravity="center"
+                        android:background="@color/gray"
+                        android:gravity="center"
+                        android:paddingLeft="4dp"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/space" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="@dimen/btm_height"
+                        android:background="@color/gray"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="4dp"
+                        android:singleLine="true"
+                        android:text="Nonce"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_nonce"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/btm_height"
+                        android:layout_gravity="center"
+                        android:background="@color/gray"
+                        android:gravity="center"
+                        android:paddingLeft="4dp"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/space" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="@dimen/btm_height"
+                        android:background="@color/gray"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="4dp"
+                        android:singleLine="true"
+                        android:text="Gas 价格"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_gas_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/btm_height"
+                        android:layout_gravity="center"
+                        android:background="@color/gray"
+                        android:gravity="center"
+                        android:paddingLeft="4dp"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/space" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="@dimen/btm_height"
+                        android:background="@color/gray"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="4dp"
+                        android:singleLine="true"
+                        android:text="Gas 限制"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_gas_limit"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/btm_height"
+                        android:layout_gravity="center"
+                        android:background="@color/gray"
+                        android:gravity="center"
+                        android:paddingLeft="4dp"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/space" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="@dimen/btm_height"
+                        android:background="@color/gray"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="4dp"
+                        android:singleLine="true"
+                        android:text="Gas 消耗"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_gas_spend"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/btm_height"
+                        android:layout_gravity="center"
+                        android:background="@color/gray"
+                        android:gravity="center"
+                        android:paddingLeft="4dp"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/space" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="@dimen/btm_height"
+                        android:background="@color/gray"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="4dp"
+                        android:singleLine="true"
+                        android:text="数据"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/btm_height"
+                        android:layout_gravity="center"
+                        android:background="@color/gray"
+                        android:gravity="center"
+                        android:paddingLeft="4dp"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/space" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+</FrameLayout>
+

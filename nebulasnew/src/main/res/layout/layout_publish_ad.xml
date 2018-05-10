@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="动态信息"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/space" />
+
+                <EditText
+                    android:id="@+id/edit_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/btm_height"
+                    android:background="@color/gray"
+                    android:gravity="center_vertical"
+                    android:hint="标题"
+                    android:paddingLeft="4dp"
+                    android:textSize="12sp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/space" />
+
+                <EditText
+                    android:id="@+id/edit_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/btm_height"
+                    android:background="@color/gray"
+                    android:gravity="center_vertical"
+                    android:hint="内容"
+                    android:paddingLeft="4dp"
+                    android:textSize="12sp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/space" />
+
+                <EditText
+                    android:id="@+id/edit_url"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/btm_height"
+                    android:background="@color/gray"
+                    android:gravity="center_vertical"
+                    android:hint="图片地址"
+                    android:paddingLeft="4dp"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/space" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/space" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="来自地址" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/space" />
+
+                <TextView
+                    android:id="@+id/tv_address_from"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/btm_height"
+                    android:background="@color/gray"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="4dp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/space" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="余额" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/space" />
+
+                <TextView
+                    android:id="@+id/tv_balance"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/btm_height"
+                    android:background="@color/gray"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="4dp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/space" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Gas Limit" />
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/space" />
+
+                        <EditText
+                            android:id="@+id/edit_gas_limit"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/btm_height"
+                            android:background="@color/gray"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="4dp"
+                            android:text="200000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="@dimen/space"
+                        android:layout_height="@dimen/space" />
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Gas Price" />
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/space" />
+
+                        <EditText
+                            android:id="@+id/edit_gas_price"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/btm_height"
+                            android:background="@color/gray"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="4dp"
+                            android:text="1000000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nonce" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/space" />
+
+                <TextView
+                    android:id="@+id/tv_nonce"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/btm_height"
+                    android:background="@color/gray"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:textSize="12sp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/space" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space" />
+
+                <EditText
+                    android:id="@+id/edit_pwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@color/gray"
+                    android:gravity="center"
+                    android:hint="请输入密码"
+                    android:inputType="textPassword"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space" />
+
+                <Button
+                    android:id="@+id/btn_send_trans"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/btm_height"
+                    android:background="@color/colorPrimary"
+                    android:text="发布动态"
+                    android:textColor="@color/white" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/space" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+    <ProgressBar
+        android:layout_gravity="center"
+        android:id="@+id/progress"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</FrameLayout>
+

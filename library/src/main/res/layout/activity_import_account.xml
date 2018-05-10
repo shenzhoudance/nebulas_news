@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="输入密钥" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space" />
+
+            <EditText
+                android:id="@+id/edit_keystore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="密钥"
+                android:minHeight="100dp"
+                android:textSize="14sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="输入密码:（不少于9位数）" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space" />
+
+            <EditText
+                android:id="@+id/edit_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:gravity="center"
+                android:hint="请输入密码"
+                android:inputType="textPassword"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space" />
+
+            <Button
+                android:id="@+id/btn_importaccount"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btm_height"
+                android:background="@color/colorPrimary"
+                android:text="导入钱包"
+                android:textColor="@color/white" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:layout_gravity="center"
+        android:id="@+id/progress"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</FrameLayout>
