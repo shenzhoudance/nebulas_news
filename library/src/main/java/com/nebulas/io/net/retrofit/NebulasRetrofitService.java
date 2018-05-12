@@ -14,6 +14,7 @@ import com.nebulas.io.net.model.TestContractResult;
 import com.nebulas.io.net.model.TransResult;
 import com.nebulas.io.net.model.Transaction;
 import com.nebulas.io.net.util.NetConfig;
+import com.nebulas.io.update.UpdateInfo;
 
 import retrofit2.Call;
 import retrofit2.Retrofit;
@@ -26,13 +27,11 @@ public class NebulasRetrofitService {
 
     private static NebulasRetrofitService nebulasRetrofitService;
     private Retrofit retrofit;
+    private Retrofit updateRetrofit;
 
     private NebulasRetrofitService() {
-//        localRetrofit = RetrofitFactory.getInstance("http://192.168.0.103:8685");
-//        retrofit = RetrofitFactory.getInstance("https://testnet.nebulas.io/");
         retrofit = RetrofitFactory.getInstance("https://mainnet.nebulas.io/");
-//        retrofit = RetrofitFactory.getInstance("http://192.168.0.103:8685/");
-//        testNet = RetrofitFactory.getInstance("https://testnet.nebulas.io/");
+        updateRetrofit = RetrofitFactory.getInstance("http://www.wanandroid.com");
     }
 
     public Retrofit getRetrofit() {
@@ -104,6 +103,10 @@ public class NebulasRetrofitService {
      */
     public Call<AddressList> getAccounts() {
         return retrofit.create(NebulasAPIService.AccountService.class).getAccountList();
+    }
+
+    public Call<UpdateInfo> checkUpdate() {
+        return updateRetrofit.create(NebulasAPIService.AccountService.class).checkUpdate();
     }
 
     public Call<Account> createNewAccount(String pwd) {

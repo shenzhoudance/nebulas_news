@@ -8,4 +8,10 @@
     <color name="black">#000000</color>
 
     <color name="yellow">#FFF3F3A9</color>
+
+    <color name="window_bg">#f0f2f5</color>
+    <color name="transpant">#00000000</color>
+    <color name="btn_bg">#479cf3</color>
+
+
 </resources>

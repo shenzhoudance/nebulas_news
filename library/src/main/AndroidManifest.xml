@@ -6,6 +6,18 @@
 
         <activity android:name=".wallet.ImportAccountActivity" />
         <activity android:name=".wallet.TransferInfoActivity" />
+        <activity android:name=".permission.PermissionHandlerActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="permission"
+                    android:scheme="nebulasnews" />
+            </intent-filter>
+        </activity>
     </application>
 
 

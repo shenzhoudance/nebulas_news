@@ -64,12 +64,7 @@ public class CreateAccountFragment extends BaseFragment implements View.OnClickL
                     protected Address doInBackground(Void... voids) {
                         try {
                             Address address = AccountManager.instance().newAccount(pwd.getBytes());
-                            String jsonStr = AccountManager.instance().export(address, pwd.getBytes());
-                            CreateAccountFragment.this.getView().findViewById(R.id.key_layout).setVisibility(View.VISIBLE);
-                            ((TextView) CreateAccountFragment.this.getView().findViewById(R.id.textview_keyjson)).setText(jsonStr);
-                            LogUtils.d("密钥" + jsonStr);
-                            Address sameAddress = AccountManager.instance().load(jsonStr.getBytes(), pwd.getBytes());
-                            return sameAddress;
+                            return address;
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
@@ -81,7 +76,10 @@ public class CreateAccountFragment extends BaseFragment implements View.OnClickL
                         super.onPostExecute(address);
                         CreateAccountFragment.this.getView().findViewById(R.id.progress).setVisibility(View.GONE);
                         if (address != null) {
-
+                            String jsonStr = AccountManager.instance().export(address, pwd.getBytes());
+                            CreateAccountFragment.this.getView().findViewById(R.id.key_layout).setVisibility(View.VISIBLE);
+                            ((TextView) CreateAccountFragment.this.getView().findViewById(R.id.textview_keyjson)).setText(jsonStr);
+                            LogUtils.d("密钥" + jsonStr);
                         }
                     }
                 }.execute();

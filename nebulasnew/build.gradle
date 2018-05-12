@@ -9,7 +9,7 @@ android {
         applicationId "com.nebulasnews"
         minSdkVersion 15
         targetSdkVersion 26
-        versionCode 1
+        versionCode 10
         versionName "1.0"
         multiDexEnabled true
 

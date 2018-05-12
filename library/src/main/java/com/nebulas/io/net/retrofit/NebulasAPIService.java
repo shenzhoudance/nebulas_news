@@ -18,6 +18,7 @@ import com.nebulas.io.net.model.SubscribeResult;
 import com.nebulas.io.net.model.TestContractRequest;
 import com.nebulas.io.net.model.TransResult;
 import com.nebulas.io.net.model.Transaction;
+import com.nebulas.io.update.UpdateInfo;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -142,6 +143,9 @@ class NebulasAPIService {
         
         @POST("/v1/user/dynasty")
         Call<Miners> dynasty(@Field("height") int height);
+
+        @GET("/tools/mockapi/5618/nebulas")
+        Call<UpdateInfo> checkUpdate();
 
 
 
